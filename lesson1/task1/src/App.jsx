@@ -8,11 +8,11 @@ class App extends React.Component {
   }
 
   toggleTheme = () => {
-    const newTheme = this.state.theme === themes.dark
-      ? themes.light
-      : themes.dark
+    const newTheme = this.state.theme === themes.light
+      ? themes.dark
+      : themes.light
 
-    this.setState({ newTheme })
+    this.setState({ theme: newTheme })
   }
   render() {
     return (
