@@ -1,14 +1,14 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
-import Counter from './components/Counter';
+import React from "react";
+import Users from "./components/Users";
+import { Provider } from "react-redux";
+import store from "./store";
 
-const App = () => {
+function App() {
   return (
     <Provider store={store}>
-      <Counter />
+      <Users />
     </Provider>
-  )
+  );
 }
 
 export default App;
