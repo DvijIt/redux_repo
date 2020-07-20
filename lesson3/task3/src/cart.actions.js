@@ -1,20 +1,20 @@
-export const ADD_PRODUCT = 'CART/ADD';
-export const REMOVE_PRODUCT = 'RREMOVE/REMOVE';
+export const ADD_PRODUCT = "CART/ADD_PRODUCT";
+export const DELETE_PRODUCT = "CART/DELETE_PRODUCT";
 
 export const addProduct = (productData) => {
   return {
     type: ADD_PRODUCT,
     payload: {
-      productData
-    }
+      productData,
+    },
   };
 };
 
 export const removeProduct = (productId) => {
   return {
-    type: REMOVE_PRODUCT,
+    type: DELETE_PRODUCT,
     payload: {
-      productId
-    }
+      productId,
+    },
   };
 };

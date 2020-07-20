@@ -1,28 +1,27 @@
-import {
-  ADD_PRODUCT,
-  REMOVE_PRODUCT
-} from './cart.actions';
+import { ADD_PRODUCT, DELETE_PRODUCT } from "./cart.actions";
 
-const initState = {
-  productList: [],
+const cart = {
+  products: [],
 };
 
-const cartReducer = (state = initState, action) => {
+const cartReducer = (state = cart, action) => {
   switch (action.type) {
     case ADD_PRODUCT:
       return {
         ...state,
-        productList: state.productList.concat(action.payload.productData),
+        products: state.products.concat(action.payload.productData),
       };
-    case REMOVE_PRODUCT:
+    case DELETE_PRODUCT:
+      const newProdList = state.products.filter(
+        (product) => product.id !== action.payload.productId
+      );
       return {
         ...state,
-        productList: state.productList
-          .filter((product) => product.id !== action.payload.productId),
+        products: newProdList,
       };
     default:
       return state;
   }
 };
 
-export default cartReducer;
+export default cartReducer
