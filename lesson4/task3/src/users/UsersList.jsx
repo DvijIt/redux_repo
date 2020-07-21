@@ -7,7 +7,6 @@ import * as userActions from '../users.actions';
 class UsersList extends React.Component {
 
   render() {
-    console.log(this);
     const itemsPerPage = 3;
     const { users, currentPage, goNext, goPrev } = this.props;
     const from = currentPage * itemsPerPage,
