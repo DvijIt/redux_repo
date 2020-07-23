@@ -36,7 +36,7 @@ class SearchField extends React.Component {
 
 const mapDispatch = {
   showSpinner: usersActions.showSpinner,
-  userDataRecived: usersActions.userDataRecived,
+  userDataRecieved: usersActions.userDataRecieved,
   fetchUserData: usersActions.fetchUserData
 }
 export default connect(null, mapDispatch)(SearchField);
